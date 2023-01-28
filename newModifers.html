@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Modifers</title>
+
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="DashBox">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <div class="toggle" onclick="toggleMenu();">
+
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                        <span class="title"> DashBoard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                        <span class="title"> Caterers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon"><i class="fa fa-list" aria-hidden="true"></i></span>
+                        <span class="title"> Manage Users</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></span>
+                        <span class="title"> Report</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon"><i class="fa fa-file-text" aria-hidden="true"></i></span>
+                        <span class="title"> Pages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon"><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                        <span class="title"> FAQ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon"><i class="fa fa-cogs" aria-hidden="true"></i></span>
+                        <span class="title"> General Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="main__body">
+            <div class="body__title mt-0 d-flex justify-content-between align-items-center">
+                <h3 class="fs-1">New Modifers</h3>
+                <!-- <a href="#" class="pt-2 pb-2 ps-4 pe-4 fs-4 text-light bg-primary rounded-pill"><i class="fa fa-plus" aria-hidden="true"></i></a> -->
+                <button class="pt-2 pb-2 ps-4 pe-4 fs-4 text-light bg-primary rounded-pill"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            </div>
+
+            <div class="body__table">
+                <div class="modifers__form">
+
+                    <form class="border-bottom border-secondary border-3 pb-3 mb-3">
+                        <label class="text-secondary fs-3 mb-1" for="name">Name</label> <br>
+                        <input class="fs-4 p-2 mb-3 w-100 rounded-3" required placeholder="E.G-Toppings "> <br>
+                        <!-- <input type="text" class="form-control fs-4 p-2 mb-3" placeholder="E.G-Toppings"> -->
+    
+                        <label class="text-white fs-3 mb-1" >0 Item</label> <br>
+                        <input class="fs-4 p-2 mb-3 w-100 rounded-3" required placeholder="Search For an Existing Item"> <br>
+                        <!-- <input type="text" class="form-control fs-4 p-2 mb-3" placeholder="Search For an Existing Item"> -->
+                    </form>
+
+                    <h4 class="text-white fs-2 fw-bold">Options</h4>
+                    <p class="text-secondary fs-4 fw-bold mb-4">Give Your Customers a list fo options to choose</p>
+
+                    <form class="border-bottom border-3 border-secondary pb-3">
+                        <a href="#" class="pt-1 pb-1 ps-4 pe-4 fs-4 d-inline-block text-light bg-primary rounded-pill"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                        <input type="text" class="ms-5 p-2 fs-3 rounded-4" required placeholder="Add an Option"> <br>
+                        <input type="text" style="width: 150px; margin-left: 120px" class="p-2 mt-3 fs-3 rounded-4 text-center" required placeholder="$0.00">
+                    </form>
+
+                    <form class="border-bottom border-3 border-secondary pb-3 mt-3">
+                        <a href="#" class="pt-1 pb-1 ps-4 pe-4 fs-4 d-inline-block text-light bg-primary rounded-pill"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                        <input type="text" class="ms-5 p-2 fs-3 rounded-4" required placeholder="Add an Option"> <br>
+                        <input style="width: 150px; margin-left: 120px" class="p-2 mt-3 fs-3 rounded-4 text-center" type="text" required placeholder="$0.00">
+                    </form>
+                </div>
+
+                <div class="rules__section mt-5">
+                    <h4 class="text-white fs-2 fw-bold">Rules</h4>
+                    <p class="text-secondary fs-4 fw-bold mb-4">Set rules for the way your customers select modifiers</p>
+
+                    <div class="required__sec d-flex justify-content-between align-items-lg-start border-bottom border-3 border-secondary">
+                       <div class="content">
+                            <h4 class="text-white fs-2 fw-bold">Required a Section</h4>
+                            <p class="text-secondary fs-4 fw-bold mb-4">If you trun on this switch, customers will have select al least one option</p>
+                       </div>
+                       <div class="eyebtn">
+                        <li class="list-group-item">
+                            <!-- Bootstrap Switch Primary -->
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionPrimary1" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionPrimary1" class="label-primary"></label>
+                            </div>
+                        </li>
+                       </div>
+                    </div>
+
+                    <div class="required__sec mt-3 d-flex justify-content-between align-items-lg-start">
+                       <div class="content">
+                            <h4 class="text-white fs-2 fw-bold">Allow Multiple <br> Section</h4>
+                            <p class="text-secondary fs-4 fw-bold mb-4">If you turn on this switch, customers will be able to seclect more than one option</p>
+                       </div>
+                       <div class="eyebtn">
+                        <li class="list-group-item">
+                            <!-- Bootstrap Switch Primary -->
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionPrimary2" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionPrimary2" class="label-primary"></label>
+                            </div>
+                        </li>
+                       </div>
+                    </div>
+                    <div class="count__section">
+                        <div class="count d-flex justify-content-between align-items-center">
+                            <p class="text-secondary fs-4 fw-bold mb-4">Maximum: </p>
+                        </div>
+                        <div class="count d-flex justify-content-between align-items-center">
+                            <p class="text-secondary fs-4 fw-bold mb-4">Minimum: </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> 
+    <!-- order details list -->
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+    <script>
+        // menu toggle
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main')
+
+        toggle.onclick = function(){
+            navigation.classList.toggle('active')
+            main.classList.toggle('active')
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

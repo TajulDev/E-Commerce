@@ -1,0 +1,574 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+}
+
+p{
+    margin: 0;
+}
+
+form input{
+    outline: none;
+    border: 1px solid #ABABAB;
+    color: var(--p--white);
+    background-color: var(--p-prBlack);
+}
+
+:root{
+    --p--white: #fff;
+    --p--Main: #0800ff;
+    --p--DBlack:#000;
+    --p-prBlack:#222222;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.DashBox{
+    position: relative;
+    width: 100%;
+}
+
+.navigation{
+    position: fixed;
+    width: 85px;
+    height: 100%;
+    background-color: var(--p--DBlack);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.navigation.active{
+    width: 300px;
+}
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-radius: 30px;
+}
+
+.hovered{
+    color: red;
+}
+
+.navigation ul li:hover{
+    background-color: var(--p--Main);
+}
+
+.navigation ul li:nth-child(1){
+    margin-bottom: 20px;
+}
+
+.navigation ul li a:nth-child(1):hover .icon .fa{
+    color: unset;
+}
+
+
+.navigation ul li:nth-child(1):hover{
+    background-color: transparent;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.navigation ul li a .icon .fa{
+    color: #fff;
+    font-size: 24px;
+}
+
+.navigation ul li a:hover .icon .fa{
+    color: #003147;
+}
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 50px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.main{
+    position: absolute;
+    width: calc(100% - 85px);
+    left: 85px;
+    min-height: 100vh;
+    transition: 0.3s;
+    padding: 30px 30px 30px 50px ;
+    background-color: var(--p--DBlack);
+}
+
+.main.active{
+    width: calc(100% - 300px);
+    left: 300px;
+}
+
+/* ================= */
+.TopBox {
+    /* width: 300px; */
+    padding: 30px 20px;
+    /* margin-left: 30px; */
+    background: blue;
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    line-height: 34px;
+}
+
+/* .TopBox:nth-child(1){
+    margin-left: 0;
+} */
+
+.body__title {
+    margin-top: 45px;
+    color: var(--p--white);
+}
+
+.body__title h3 {
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: bold;
+}
+
+.body__title h4 {
+    font-size: 32px;
+    margin-top: 25px;
+}
+
+.body__table{
+    margin-top: 30px;
+}
+
+.body__table table.order__table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.body__table table.order__table td{
+    text-align: center;
+}
+
+.body__table table.order__table thead tr td{
+    padding: 20px 0;
+    background-color: #222222;
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.body__table table.order__table tbody tr{
+    margin-bottom: 10px;
+    background-color: var(--p-prBlack);
+}
+
+.body__table table.order__table tbody tr td{
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    padding: 20px;
+    background-color: transparent;
+}
+
+.body__table table.order__table tbody tr td span{
+    padding: 5px 10px;
+    background-color: blue;
+    color: #fff;
+    border-radius: 30%;
+    
+}
+
+.body__table table.order__table tbody tr td:last-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+}
+
+
+
+.body__table table.order__table tbody tr td:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body__table table.order__table tbody tr td i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* ================= */
+
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle::before{
+    content: '\f0c9';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+}
+
+/* manager page start here */
+.body__table ul{
+    display: flex;
+}
+
+.body__table ul li img {
+    width: 104px;
+    height: 104px;
+}
+
+/* manager page end here */
+
+
+/* new modifers page start here */
+/* .modifers__form form  */
+/* new modifers page end here */
+
+/* cMenu */
+.body__table.table__cMenu table{
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+
+.body__table.table__cMenu table tbody tr{
+    margin-bottom: 10px;
+}
+
+.body__table.table__cMenu thead tr td{
+    text-align: center;
+}
+
+.body__table.table__cMenu table tbody tr td{
+    width: 50%;
+    color: #8a8a8a;
+}
+
+.body__table.table__cMenu tbody tr td input{
+    width: 90%;
+    outline: none;
+    background-color: var(--p-prBlack);
+    color: #8a8a8a;
+    margin-left: 3.2rem;
+}
+
+.body__table.table__cMenu tbody tr td:first-child{
+    width:100px;
+    border-radius: 20px;
+    background-color: var(--p-prBlack);
+    text-align: center;
+}
+/* cMenu */
+
+/* acceptence page */
+.acceptence{
+    background-color: rgb(6, 145, 6);
+    height: 100vh;
+    padding: 20px;
+}
+
+.acceptence__title h2{
+    font: 40px;
+}
+
+.tap__now {
+    height: 100%;
+}
+
+.tap__now button{
+    height: 200px;
+    width: 200px;
+    line-height: 200px;
+    text-align: center;
+    margin: 0;
+    border-radius: 50%;
+    background-color: #1bb054;
+    font-size: 100px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+/* acceptence page */
+
+
+
+
+/* ===================== */
+
+.material-switch > input[type="checkbox"] {
+    display: none;   
+}
+
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative; 
+    width: 40px;  
+}
+
+.material-switch > label::before {
+    /* background: rgb(0, 0, 0); */
+    background-color: #fff;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    content: '';
+    height: 16px;
+    margin-top: -8px;
+    position:absolute;
+    /* opacity: 0.3; */
+    transition: all 0.4s ease-in-out;
+    width: 40px;
+}
+.material-switch > label::after {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    content: '';
+    height: 24px;
+    left: -4px;
+    margin-top: -8px;
+    position: absolute;
+    top: -4px;
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+.material-switch > input[type="checkbox"]:checked + label::before {
+    background: blue;
+    /* opacity: 0.5; */
+}
+.material-switch > input[type="checkbox"]:checked + label::after {
+    /* background: blue; */
+    left: 20px;
+}
+/* ===================== */
+
+/* setting page start here */
+form.settings__form{
+    padding: 2.5rem!important;
+    background: #80808052;
+    border-radius: 5px;
+}
+
+form.settings__form .form__separate .sep1,
+form.settings__form .form__separate .sep2
+{
+    width: 49%;
+}
+
+form.settings__form .form__separate .sep1 label,
+form.settings__form .form__separate .sep2 label,
+form.settings__form .sep3 label
+{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--p--white);
+    line-height: 32px;
+    margin: 15px 0 6px;
+}
+
+form.settings__form .sep3 label{
+    width: 100%;
+    text-align: center;
+}
+
+.form__separate .sep1 input,
+.form__separate .sep2 input ,
+form.settings__form .sep3 input
+ {
+    width: 100%;
+    padding: 3px;
+    font-size: 1rem;
+    border: 2px solid gray;
+    font-weight: 400;
+}
+
+form.settings__form button{
+    width: 90px;
+}
+
+form.settings__form p{
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--p--white);
+}
+
+form.settings__form textarea{
+    background: transparent;
+    border: 2px solid gray;
+    padding: 10px;
+    color: var(--p--white);
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+.page__list {
+    padding: 26px;
+    width: 65%;
+    border-radius: 8px;
+    background: #80808052;
+}
+
+.page__list p {
+    font-size: 28px;
+    color: var(--p--white);
+    margin-bottom: 20px;
+}
+
+table.page__lists__table {
+    width: 100%;
+}
+
+table.page__lists__table tbody tr {
+    border: 2px solid gray;
+}
+
+table.page__lists__table tbody tr td {
+    padding: 8px;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--p--white);
+}
+
+table.page__lists__table tbody tr td:last-child {
+    text-align: end;
+}
+
+.paid__boxes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+
+}
+
+.paid__boxes .paid__box {
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid lightgray;
+    width: 320px;
+    border-radius: 10px;
+    background: #222222;
+    margin-bottom: 50px;
+}
+
+.paid__boxes .paid__box p {
+    font-size: 30px;
+    line-height: 48px;
+}
+
+.paid__boxes .paid__box span {
+    font-size: 42px;
+    line-height: 48px;
+}
+
+/* setting page start here */
+
+@media screen and (max-width: 1640px) {
+    .TopBox{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .topbar{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .TopBox{
+        padding: 10px;
+        width: 200px;
+        font-size: 18px;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .navigation{
+        left: -300px;
+    }
+    .navigation.active{
+        width: 300px;
+        left: 0;
+    }
+    .main{
+        width: 100%;
+        left: 0px;
+    }
+    .main.active{
+        left: 300px;
+    }
+    .cardBox{
+        grid-template-columns: repeat(2,1fr);
+    }
+} 
